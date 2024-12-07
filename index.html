@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OCR Example</title>
+    <link href="/index.css" type="text/css" rel="stylesheet" />
+    <style>
+      canvas {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">OCR is Loading</h1>
+
+    <div class="hide" style="display:none;">
+      <input type="file" id="input-image" />
+      <br />
+      <div id="performance"></div>
+    </div>
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      "
+    >
+      <div>
+        <video id="video-feed" autoplay muted></video>
+        <canvas id="canvas"></canvas>
+      </div>
+
+      <div class="result">
+        <img id="result-image" />
+        <pre id="result-text" style="font-size: 20px;font-weight: 400;letter-spacing: 2px;"></pre>
+      </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script> -->
+    <script src="browser.js"></script>
+  </body>
+</html>
